@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "test": "mocha --require test/setup.js",
-    "dev": "nodemon src/server.js",
+    "test": "mocha --require test/setup.js --watch",
+    "start": "node src/shopping-list.js",
+    "dev": "node src/shopping-list.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master"
   },
@@ -18,7 +18,9 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
+    "knex": "^0.20.8",
     "morgan": "^1.9.1",
+    "pg": "^7.17.1",
     "uuid": "^3.4.0",
     "winston": "^3.2.1"
   },
